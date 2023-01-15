@@ -9,3 +9,6 @@ The LDPC decoder is achieved by transmitting likelihood message over the tanner 
 I will continue updating the algorithm that transmit the log-likelihood message.
 
 
+Please test example by running main.m over MATLAB
+
+
