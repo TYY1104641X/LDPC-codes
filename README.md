@@ -14,8 +14,8 @@ I have achieved the decoding algorithms by transmitting both the likelihood prob
 
 Please test the example by running main.m and main_log_LDPC over MATLAB
    
-   main--test LDPC decoding by passing likelihood probability
+   a) main--test LDPC decoding by passing likelihood probability
    
-   main_log_LDPC--test LDPC decoding by passing the log-ratio probability
+   b) main_log_LDPC--test LDPC decoding by passing the log-ratio probability
 
 
