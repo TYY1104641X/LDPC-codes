@@ -1,5 +1,5 @@
 # LDPC-codes
-Understood LDPC codes and decoding codewords based on a Gaussian channel
+Understood LDPC codes and decoding codewords over a Gaussian channel
 
 Reference: 
         
