@@ -4,7 +4,7 @@ Understood LDPC codes and decoding codewords over a Gaussian channel
 Reference: 
         
        a) https://www.itsoc.org/conferences/schools/past-schools/na-school-2009/lecture-files/Costello-3.pdf
-
+       
        b) Willian E. Ryan, An Introduction to LDPC codes, http://tuk88.free.fr/LDPC/ldpcchap.pdf
 
 
