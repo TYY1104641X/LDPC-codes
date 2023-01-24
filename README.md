@@ -1,4 +1,7 @@
 # LDPC-codes
+
+@Yuanyuan Tang
+
 Understood LDPC codes and decoding codewords over a Gaussian channel
 
 Reference: 
