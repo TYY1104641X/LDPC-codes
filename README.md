@@ -9,6 +9,8 @@ Reference:
        a) https://www.itsoc.org/conferences/schools/past-schools/na-school-2009/lecture-files/Costello-3.pdf
        
        b) Willian E. Ryan, An Introduction to LDPC codes, http://tuk88.free.fr/LDPC/ldpcchap.pdf
+       
+       c) LDPC codes: Achieving the Capacity of the Binary Erasure Channel, https://community.wvu.edu/~mcvalenti/documents/LDPC2009.pdf
 
 
 The LDPC decoder is achieved by transmitting likelihood message over the tanner graph and simulated by MATLAB. 
