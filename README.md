@@ -12,9 +12,7 @@ Reference:
        
        c) LDPC codes: Achieving the Capacity of the Binary Erasure Channel, https://community.wvu.edu/~mcvalenti/documents/LDPC2009.pdf
        
-       d) 5G NR LDPC, https://www.cambridge.org/core/services/aop-cambridge-core/content/view/CF52C26874AF5E00883E00B6E1F907C7/S2048770319000106a.pdf/an_overview_of_channel_coding_for_5g_nr_cellular_communications.pdf
-
-
+       
 The LDPC decoder is achieved by transmitting likelihood message over the tanner graph and simulated by MATLAB. 
 
 
