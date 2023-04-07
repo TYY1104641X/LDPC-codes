@@ -14,15 +14,40 @@ clear all;
 n=8;                             % The length of LDPC codeword
 k=4;                             % The dimension of LDPC code
 
- H=[1, 1 ,1 ,0, 0, 0 ,0 ,0;
-    0, 0 ,0 ,1, 1 ,1, 0, 0;
-    1 ,0, 0 ,1 ,0, 0, 1 ,0;
-    0 ,1 ,0 ,0 ,1 ,0 ,0, 1];      % The parity check matrix
+ H=[1, 1 , 1 ,0, 0, 0 ,0 ,0;
+    0, 0 , 0 ,1, 1 ,1, 0, 0;
+    1 ,0 , 0 ,1 ,0, 0, 1 ,0;
+    0 ,1 , 0 ,0 ,1 ,0 ,0, 1];      % The parity check matrix
 
-c=[1,0,1, 0,1,1, 1,1];            % The codeword
+ %% LDPC encoder
+ % Step 1  H  ---> H'=[P,I]
+ % Step 2  G=[I,P^T]
+ % Step 3  c= m G
+
+
+ P= eye(n);
+ P(3,5)=1;
+ P(5,3)=1;
+ P(3,3)=0;
+ P(5,5)=0;
+ H1 = H*P;   % Permutation 3rd and 5th column such that H1=[P1,I]   G=[I, P1^T]
+
+ P1=H1(1:4,1:4);   
+
+ ms=[1,1,1,0];
+ 
+ pm=mod(P1*ms',2);  % Parity bits are 
+
+ c1=[ms,pm'];
+
+ c=c1*P;          % Permutation the columns
+
+
+
+%c=[1,0,1, 0,1,1, 1,1];            % The codeword
 
 sigma2=0.5;                       % The variance of AGWN
-
+mu=0;
 
 %% Gaussian channel with binary input
 bpskModulator = comm.BPSKModulator;
@@ -33,8 +58,13 @@ x=real(x);                                                       % The real
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%% Gaussian channel discussing later
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+z = normrnd(mu,sqrt(sigma2),[length(x),1]);
 
-y=[0.2,0.2,-0.9, 0.6, 0.5, -1.1, -0.4, -1.2];                    % The output 
+%y=[0.2,0.2,-0.9, 0.6, 0.5, -1.1, -0.4, -1.2];                    % The output 
+y=x+z;
+
+
+%y=[0.2,0.2,-0.9, 0.6, 0.5, -1.1, -0.4, -1.2];                    % The output 
 
 
 
@@ -162,4 +192,10 @@ end
 disp(LQ_arr);
 disp(C_d_arr);
 
+%% decoding error
+
+dis=abs(c-C_d_arr(end,:));
+
+disp('decoding error');
+disp(dis)
 
