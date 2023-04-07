@@ -2,7 +2,7 @@
 
 @Yuanyuan Tang
 
-Understood LDPC codes and decoding codewords over a Gaussian channel
+Understood LDPC code, encoding and decoding codewords over a Gaussian channel
 
 Reference: 
         
