@@ -16,7 +16,7 @@ Reference:
 The LDPC decoder is achieved by transmitting likelihood message over the tanner graph and simulated by MATLAB. 
 
 
-I have achieved the decoding algorithms by transmitting both the likelihood probability and the log-ratio of probability. 
+I have achieved encoding and the decoding algorithms by transmitting both the likelihood probability and the log-ratio of probability. 
 
 
 Please test the example by running main.m and main_log_LDPC over MATLAB
